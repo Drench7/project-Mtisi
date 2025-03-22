@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Assist - Financial Management for International Students</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Finance Assist</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <img src="../asserts/images/logo.png" alt="Finance Assist Logo">
+            <h2>Empowering International Students with Financial Freedom</h2>
+            <p>Manage your budget, track expenses, and discover financial resources all in one place.</p>
+            <a href="#dashboard" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Key Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <img src="../asserts/icons/budgeting.png" alt="Budgeting Icon" height="30">
+                    <h3>Personalized Budgeting</h3>
+                    <p>Create and manage budgets tailored to your needs.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="../asserts/icons/currency conversion icon.png" alt="Currency Conversion Icon" height="30">
+                    <h3>Real-Time Currency Conversion</h3>
+                    <p>Convert currencies instantly and manage finances globally.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="../asserts/icons/scholarships icon.png" alt="Scholarships Icon" height="30">
+                    <h3>Scholarship & Job Alerts</h3>
+                    <p>Get notified about scholarships and part-time job opportunities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="dashboard">
+        <div class="container">
+            <h2>Your Financial Dashboard</h2>
+            <div class="dashboard-grid">
+                <div class="card">
+                    <h3>Expense Tracker</h3>
+                    <input type="text" id="expense-name" placeholder="Expense Name">
+                    <input type="number" id="expense-amount" placeholder="Amount">
+                    <button onclick="addExpense()">Add Expense</button>
+                    <ul id="expense-list"></ul>
+                </div>
+                <div class="card">
+                    <h3>Currency Converter</h3>
+                    <input type="number" id="amount" placeholder="Amount">
+                    <select id="from-currency">
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="GBP">GBP</option>
+                        <option value="INR">INR</option>
+                    </select>
+                    <span>to</span>
+                    <select id="to-currency">
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="GBP">GBP</option>
+                        <option value="INR">INR</option>
+                    </select>
+                    <button onclick="convertCurrency()">Convert</button>
+                    <p id="conversion-result"></p>
+                </div>
+                <div class="card">
+                    <h3>Budget Planner</h3>
+                    <input type="number" id="monthly-budget" placeholder="Monthly Budget">
+                    <button onclick="setBudget()">Set Budget</button>
+                    <p>Total Expenses: $<span id="total-expenses">0.00</span></p>
+                    <p>Remaining Budget: $<span id="remaining-budget">0.00</span></p>
+                </div>
+                <div class="card">
+                    <h3>Scholarship & Job Alerts</h3>
+                    <ul id="alerts-list"></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="contact">
+        <div class="container">
+            <p>&copy; 2025 Finance Assist. All rights reserved.</p>
+            <p>Contact us: <a href="mailto:mtisitawananyasha41@gmail.com">mtisitawananyasha41@gmail.com</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
